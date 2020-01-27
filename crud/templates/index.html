@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="/emp" method="post">{% csrf_token %}
+<h5>Add Details</h5>
+name:
+{{ form.name }}</br>
+email:
+{{ form.email }}</br>
+phone:
+{{ form.phone }}</br>
+<button type="submit">Submit</button>
+    </form>
+</body>
+</html>

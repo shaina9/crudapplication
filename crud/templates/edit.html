@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update/{{ employee.id}}" method="post">
+    {% csrf_token %}
+    <h3>Update Details</h3>
+    name:<input name="name" value="{{employee.name}}"><br>
+    email:<input name="email" value="{{employee.email}}"><br>
+    phone:<input name="phone" value="{{employee.phone}}"><br>
+    <input type="submit" value="submit" name="submit">
+</form>
+</body>
+</html>

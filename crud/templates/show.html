@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <table>
+        <tr><th>name</th><th>email</th><th>phone</th><th>actions</th></tr>
+        {% for emp in employee %}
+        <tr>
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.phone}}</td>
+            <td>
+                <a href="/edit/{{emp.id}}">Edit</a>
+                <a href="/delete/{{emp.id}}">Delete</a>
+            </td>
+            <td><a href="/emp">Add new</a></td>
+            <td><a href="/login">Admin panel</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+</body>
+</html>
